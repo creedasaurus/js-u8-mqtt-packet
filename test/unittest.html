@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset="utf-8">
-  <title>JSY Mocha Unittest</title>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/mocha/mocha.css' />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JSY Mocha Unittest</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mocha/mocha.css"
+    />
 
-  <script src='https://cdn.jsdelivr.net/npm/mocha/mocha.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/chai/chai.js'></script>
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/mocha/mocha.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chai/chai.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
 
-<div id="mocha"></div>
-
-<script>
-  window.require = module => window[module] || window[module.replace('-', '_')]
-  mocha.setup({ ui: 'bdd' })
-</script>
-<script src='./__unittest.iife.js'></script>
-<script src='./__integ.web.js'></script>
-<script>
-  mocha.run()
-</script>
-</body>
+    <script>
+      window.require = (module) =>
+        window[module] || window[module.replace("-", "_")];
+      mocha.setup({ ui: "bdd" });
+    </script>
+    <script src="./__unittest.iife.js"></script>
+    <script src="./__integ.web.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
 </html>

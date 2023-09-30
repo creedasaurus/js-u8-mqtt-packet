@@ -1,15 +1,12 @@
-
 export function mqtt_encode_unsubscribe(ns, mqtt_writer) {
-  return ns.unsubscribe = ( mqtt_level, pkt ) => {
-    let wrt = mqtt_writer.of(pkt)
+  return (ns.unsubscribe = (mqtt_level, pkt) => {
+    let wrt = mqtt_writer.of(pkt);
 
-    wrt.u16(pkt.pkt_id)
-    if (5 <= mqtt_level)
-      wrt.props(pkt.props)
+    wrt.u16(pkt.pkt_id);
+    if (5 <= mqtt_level) wrt.props(pkt.props);
 
-    for (let topic of pkt.topics)
-      wrt.utf8(topic)
+    for (let topic of pkt.topics) wrt.utf8(topic);
 
-    return wrt.as_pkt(0xa2)
-  }
+    return wrt.as_pkt(0xa2);
+  });
 }

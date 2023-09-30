@@ -1,1 +1,1 @@
-export const version = 'GITREPO'
+export const version = "GITREPO";

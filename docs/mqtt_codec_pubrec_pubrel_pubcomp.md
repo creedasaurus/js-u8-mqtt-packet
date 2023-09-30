@@ -6,10 +6,10 @@
 - [3.6 PUBREL – Publish release (QoS 2 publish received, part 2)](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc398718053)
 - [3.7 PUBCOMP – Publish complete (QoS 2 publish received, part 3)](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc398718058)
 
-| u8   | reason |
-|-----:|:-------|
-| 0x00 | Success
-| 0x92 | Packet Identifier not found
+|   u8 | reason                      |
+| ---: | :-------------------------- |
+| 0x00 | Success                     |
+| 0x92 | Packet Identifier not found |
 
 ##### Version 5
 
@@ -19,10 +19,10 @@
 
 Includes MQTT [props](./mqtt_props.md)
 
-| u8   | reason |
-|-----:|:-------|
-| 0x00 | Success
-| 0x92 | Packet Identifier not found
+|   u8 | reason                      |
+| ---: | :-------------------------- |
+| 0x00 | Success                     |
+| 0x92 | Packet Identifier not found |
 
 #### Codec
 
@@ -32,16 +32,15 @@ Includes MQTT [props](./mqtt_props.md)
 // pkt_pubrec_v4, pkt_pubrel_v4, pkt_pubcomp_v4
 type pkt_pubxxx_v4 = {
   __proto__: _pkt_ctx_,
-  pkt_id : u16,
-  reason : u8,
-}
+  pkt_id: u16,
+  reason: u8,
+};
 
 // pkt_pubrec_v5, pkt_pubrel_v5, pkt_pubcomp_v5
 type pkt_pubxxx_v5 = {
   __proto__: _pkt_ctx_,
-  pkt_id : u16,
-  reason : u8,
-  props : mqtt_props_v5,
-}
+  pkt_id: u16,
+  reason: u8,
+  props: mqtt_props_v5,
+};
 ```
-

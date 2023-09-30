@@ -30,6 +30,8 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-virtual": "^3.0.1",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
     "qsrv": "^0.2.8",
     "rollup": "^3.27.0",
     "rollup-plugin-dgnotify": "^0.1.8"
